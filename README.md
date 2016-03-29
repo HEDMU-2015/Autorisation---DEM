@@ -1,4 +1,2 @@
 # Autorisation---DEM
-BLABLA
-d
-done test
+- I MÅ ALDRIG COMMIT .classpath & .project!
