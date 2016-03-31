@@ -1,6 +1,6 @@
 package organization.domain;
 
-public class OrganizationDomainImpl {
+public class OrganizationImpl {
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
