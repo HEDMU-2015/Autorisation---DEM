@@ -2,7 +2,7 @@ package organization.API;
 
 import java.util.List;
 
-import organization.domain.DataAccess;
+import dataAccess.DataAccess;
 import organization.domain.OrganizationDomainImpl;
 
 public interface Organization {
