@@ -2,6 +2,14 @@ package organization;
 
 public class OrganizationDomainImpl {
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "OrganizationDomainImpl [Organid=" + Organid + ", Organname=" + Organname + ", OrganparentID="
+				+ OrganparentID + "]";
+	}
 	int Organid;
 	String Organname;
 	int OrganparentID;
