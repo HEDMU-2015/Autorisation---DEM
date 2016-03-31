@@ -2,8 +2,8 @@ package organization.API;
 
 import java.util.List;
 
-import organization.DataAccess;
-import organization.OrganizationDomainImpl;
+import organization.domain.DataAccess;
+import organization.domain.OrganizationDomainImpl;
 
 public interface Organization {
 
@@ -11,7 +11,7 @@ public interface Organization {
 	
 	public List<OrganizationDomainImpl> getChildren(int id, DataAccess dataAccess);
 	
-	public List<OrganizationDomainImpl> getAllFromOrganization(int id, DataAccess dataAccess);
+	public List<OrganizationDomainImpl> getAllFromOrganization();
 	
 
 }
