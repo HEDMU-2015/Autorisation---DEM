@@ -1,4 +1,4 @@
-package organisation.implemention;
+package organization;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
