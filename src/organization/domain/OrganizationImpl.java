@@ -1,4 +1,4 @@
-package organization.domain;
+package src.organization.domain;
 
 public class OrganizationImpl {
 
