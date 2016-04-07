@@ -8,9 +8,13 @@ import security.domain.UserPermissionDomainImpl;
 
 public interface SecurityAPI {
 	
-	public List<UserPermissionDomainImpl>getAllFromPermissions(String email);
+	public boolean login(String userId, String encryptedPassword);
 
 	public UserDomainImpl getUser(String userID);
+	
+	public String getIdOfUserLoggedIn();
+	
+	public List<UserPermissionDomainImpl>getAllFromPermissions(String userID);
 
 	public PermissionDomainImpl getPermissionID(int permissionId);
 
