@@ -2,8 +2,8 @@ package organization.API;
 
 import java.util.List;
 
-import src.dataAccess.DataAccess;
-import src.organization.domain.OrganizationImpl;
+import dataAccess.DataAccess;
+import organization.domain.OrganizationImpl;
 
 public interface Organization {
 
