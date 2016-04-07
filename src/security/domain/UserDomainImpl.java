@@ -1,5 +1,5 @@
 package security.domain;
-
+ 
 public class UserDomainImpl {
 	int id; 
 	String email;
