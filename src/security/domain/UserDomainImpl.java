@@ -1,4 +1,4 @@
-package src.security.domain;
+package security.domain;
 
 public class UserDomainImpl {
 

@@ -1,4 +1,4 @@
-package src.organization.API;
+package organization.API;
 
 import java.util.List;
 

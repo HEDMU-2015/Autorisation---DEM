@@ -1,4 +1,4 @@
-package src.security.API;
+package security.API;
 
 public interface Security {
 
