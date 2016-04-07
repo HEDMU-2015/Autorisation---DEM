@@ -1,10 +1,20 @@
 package security.domain;
- 
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+
 public class UserDomainImpl {
 	int id; 
 	String email;
 	String name;
 	String encryptedPassword;
+	
+	public static String encrypt(String txt) throws NoSuchAlgorithmException {
+		MessageDigest md = MessageDigest.getInstance("SHA-256");
+		byte[] mdbytes = md.digest(txt.getBytes());
+		return Base64.getEncoder().encodeToString(mdbytes);
+	}
 	
 	public int getId() {
 		return id;
@@ -36,6 +46,10 @@ public class UserDomainImpl {
 	
 	public void setEncryptedPassword(String encryptedPassword) {
 		this.encryptedPassword = encryptedPassword;
+	}
+	
+	public void setAndEncryptPassword(String password) throws NoSuchAlgorithmException {
+		this.encryptedPassword = encrypt(password);
 	}
 
 	@Override

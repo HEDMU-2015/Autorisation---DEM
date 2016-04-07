@@ -5,13 +5,13 @@ import java.util.List;
 import dataAccess.DataAccess;
 import organization.domain.OrganizationImpl;
 
-public interface Organization {
+public interface OrganizationMapper {
 
 	public OrganizationImpl readOrganization(int id, DataAccess dataAccess);
 	
 	public List<OrganizationImpl> getChildren(int id, DataAccess dataAccess);
 	
-	public List<OrganizationImpl> getAllFromOrganization();
+	public List<OrganizationImpl> getAllFromOrganizationWithoutParent(DataAccess dataAccess);
 	
 
 }
