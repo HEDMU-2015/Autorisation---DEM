@@ -9,7 +9,17 @@ public class UserDomainImpl {
 	String email;
 	String name;
 	String encryptedPassword;
+	Boolean isLogedIn = false;
 	
+	
+	public Boolean getIsLogedIn() {
+		return isLogedIn;
+	}
+
+	public void setIsLogedIn(Boolean isLogedIn) {
+		this.isLogedIn = isLogedIn;
+	}
+
 	public static String encrypt(String txt) throws NoSuchAlgorithmException {
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
 		byte[] mdbytes = md.digest(txt.getBytes());
