@@ -3,6 +3,7 @@ package logik;
 import java.util.List;
 
 import mapper.OrganizationMapper;
+import mapper.SecurityMapperIMPL;
 import security.API.SecurityAPI;
 import security.domain.PermissionDomainImpl;
 import security.domain.UserDomainImpl;
@@ -10,6 +11,8 @@ import security.domain.UserPermissionDomainImpl;
 
 public class SecurityImpl implements SecurityAPI {
 
+	SecurityMapperIMPL securitymap = new SecurityMapperIMPL();
+	
 	@Override
 	public boolean login(String userId, String encryptedPassword) {
 		// TODO Auto-generated method stub

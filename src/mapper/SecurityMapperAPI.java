@@ -8,7 +8,7 @@ import security.domain.PermissionDomainImpl;
 import security.domain.UserDomainImpl;
 import security.domain.UserPermissionDomainImpl;
 
-public interface SecurityMapper {
+public interface SecurityMapperAPI {
 
 //	public Optional<UserDomainImpl> getUser(DataAccess da, String userId);
 //	public Optional<UserDomainImpl> getUser(DataAccess da, String userId, String encryptedPassword);
