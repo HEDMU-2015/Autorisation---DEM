@@ -1,7 +1,8 @@
 package security.API;
 
 import java.util.List;
-import organization.API.OrganizationMapper;
+
+import mapper.OrganizationMapper;
 import security.domain.PermissionDomainImpl;
 import security.domain.UserDomainImpl;
 import security.domain.UserPermissionDomainImpl;

@@ -1,4 +1,4 @@
-package organization.API;
+package mapper;
 
 import java.util.List;
 

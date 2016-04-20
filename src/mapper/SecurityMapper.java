@@ -1,10 +1,9 @@
-package security.API;
+package mapper;
 
 import java.util.List;
 import java.util.Optional;
 
 import dataAccess.DataAccess;
-import organization.API.OrganizationMapper;
 import security.domain.PermissionDomainImpl;
 import security.domain.UserDomainImpl;
 import security.domain.UserPermissionDomainImpl;
