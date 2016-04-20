@@ -3,15 +3,15 @@ package organization.API;
 import java.util.List;
 
 import dataAccess.DataAccess;
-import organization.domain.OrganizationImpl;
+import organization.domain.OrganisationImpl;
 
 public interface OrganizationMapper {
 
-	public OrganizationImpl readOrganization(int id, DataAccess dataAccess);
+	public OrganisationImpl readOrganization(int id, DataAccess dataAccess);
 	
-	public List<OrganizationImpl> getChildren(int id, DataAccess dataAccess);
+	public List<OrganisationImpl> getChildren(int id, DataAccess dataAccess);
 	
-	public List<OrganizationImpl> getAllFromOrganizationWithoutParent(DataAccess dataAccess);
+	public List<OrganisationImpl> getAllFromOrganizationWithoutParent(DataAccess dataAccess);
 	
 
 }

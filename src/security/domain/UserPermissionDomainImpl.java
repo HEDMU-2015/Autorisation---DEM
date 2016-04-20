@@ -1,12 +1,12 @@
 package security.domain;
 
-import organization.domain.OrganizationImpl;
+import organization.domain.OrganisationImpl;
 
 public class UserPermissionDomainImpl {
 
 	String userID;
 	PermissionDomainImpl permission;
-	OrganizationImpl organisation; 
+	OrganisationImpl organisation; 
 	String role;
 	
 	public String getUserID() {
@@ -25,11 +25,11 @@ public class UserPermissionDomainImpl {
 		this.permission = permission;
 	}
 	
-	public OrganizationImpl getOrganisation() {
+	public OrganisationImpl getOrganisation() {
 		return organisation;
 	}
 	
-	public void setOrganisation(OrganizationImpl organisation) {
+	public void setOrganisation(OrganisationImpl organisation) {
 		this.organisation = organisation;
 	}
 	

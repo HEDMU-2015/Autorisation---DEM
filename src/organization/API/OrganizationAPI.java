@@ -2,15 +2,15 @@ package organization.API;
 
 import java.util.List;
 
-import organization.domain.OrganizationImpl;
+import organization.domain.OrganisationImpl;
 
 public interface OrganizationAPI {
 
 	
-	public OrganizationImpl readOrganization(int id);
+	public OrganisationImpl readOrganization(int id);
 	
-	public List<OrganizationImpl> getChildren(int id);
+	public List<OrganisationImpl> getChildren(int id);
 	
-	public List<OrganizationImpl> getAllFromOrganizationWithoutParent();
+	public List<OrganisationImpl> getAllFromOrganizationWithoutParent();
 	
 }
