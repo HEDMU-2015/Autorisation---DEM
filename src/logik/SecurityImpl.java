@@ -1,9 +1,19 @@
 package logik;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
+import dataAccess.DataAccess;
 import mapper.OrganizationMapper;
+import mapper.SecurityMapperAPI;
 import mapper.SecurityMapperIMPL;
+import organization.domain.OrganisationImpl;
+import organization.domain.OrganizationImpl;
 import security.API.SecurityAPI;
 import security.domain.PermissionDomainImpl;
 import security.domain.UserDomainImpl;
@@ -11,13 +21,19 @@ import security.domain.UserPermissionDomainImpl;
 
 public class SecurityImpl implements SecurityAPI {
 
-	SecurityMapperIMPL securitymap = new SecurityMapperIMPL();
+	SecurityMapperAPI securitymap = new SecurityMapperIMPL();
+	
+	Connection con;
+	
 	
 	@Override
 	public boolean login(String userId, String encryptedPassword) {
-		// TODO Auto-generated method stub
+		boolean isLogin = false;
+		//TODO make test if UserId VS Password
+	
 		return false;
 	}
+	
 
 	@Override
 	public UserDomainImpl getUser(String userID) {
@@ -32,14 +48,45 @@ public class SecurityImpl implements SecurityAPI {
 	}
 
 	@Override
-	public List<UserPermissionDomainImpl> getAllFromPermissions(String userID) {
-		// TODO Auto-generated method stub
+	public List<UserPermissionDomainImpl> getAllFromPermissions(String userID) throws SQLException {
+		DataAccess da = new DataAccess();
+		UserDomainImpl udi = new UserDomainImpl(0);
+		List<UserDomainImpl>user = new ArrayList<UserDomainImpl>();
+		
+	
+		
+		String sql = "SELECT * FROM user";
+		
+		
+		PreparedStatement prep = da.getConnection().prepareStatement(sql);
+		
+		
+	
+
+		ResultSet rs = prep.executeQuery();
+		
+		
+		while(rs.next()){
+			user.add(new UserDomainImpl(rs.getInt("ID")));
+		}
+		
+		for (UserDomainImpl u : user){
+			
+			System.out.println(u.getId());
+		}
+		
+		
+		
+		
 		return null;
 	}
 
 	@Override
 	public PermissionDomainImpl getPermissionID(int permissionId) {
-		// TODO Auto-generated method stub
+		
+		
+		
+		
 		return null;
 	}
 

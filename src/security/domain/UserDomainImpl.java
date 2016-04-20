@@ -67,6 +67,20 @@ public class UserDomainImpl {
 		return "UserDomainImpl [id=" + id + ", email=" + email + ", name=" + name + ", encryptedPassword="
 				+ encryptedPassword + "]";
 	}
+
+	
+	public UserDomainImpl(int id){
+		this.id = id;
+	}
+	
+	public UserDomainImpl(int id, String email, String name, String encryptedPassword, Boolean isLogedIn) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.name = name;
+		this.encryptedPassword = encryptedPassword;
+		this.isLogedIn = isLogedIn;
+	}
 	
 	
 }

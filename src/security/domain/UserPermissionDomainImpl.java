@@ -1,6 +1,7 @@
 package security.domain;
 
 import organization.domain.OrganisationImpl;
+import organization.domain.OrganizationImpl;
 
 public class UserPermissionDomainImpl {
 
@@ -29,8 +30,8 @@ public class UserPermissionDomainImpl {
 		return organisation;
 	}
 	
-	public void setOrganisation(OrganisationImpl organisation) {
-		this.organisation = organisation;
+	public void setOrganisation(OrganisationImpl organization) {
+		this.organisation = organization;
 	}
 	
 	public String getRole() {

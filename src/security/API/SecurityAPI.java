@@ -1,5 +1,6 @@
 package security.API;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import mapper.OrganizationMapper;
@@ -15,7 +16,7 @@ public interface SecurityAPI {
 	
 	public String getIdOfUserLoggedIn();
 	
-	public List<UserPermissionDomainImpl>getAllFromPermissions(String userID);
+	public List<UserPermissionDomainImpl>getAllFromPermissions(String userID) throws SQLException;
 
 	public PermissionDomainImpl getPermissionID(int permissionId);
 

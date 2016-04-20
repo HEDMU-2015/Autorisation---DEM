@@ -22,7 +22,7 @@ public class DataAccess {
 	 * Denne metode retunerer instans af Connection eller null.
 	 * @return
 	 */
-	protected Connection getConnection() {
+	public Connection getConnection() {
 		return connection;
 	}
 
