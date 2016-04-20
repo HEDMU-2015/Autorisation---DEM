@@ -1,7 +1,5 @@
 package security.domain;
 
-import java.security.NoSuchAlgorithmException;
-
 public interface UserDomain {
 
 	public int getId();
