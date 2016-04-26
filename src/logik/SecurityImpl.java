@@ -50,7 +50,7 @@ public class SecurityImpl implements SecurityAPI {
 	@Override
 	public List<UserPermissionDomainImpl> getAllFromPermissions(String userID) throws SQLException {
 		DataAccess da = new DataAccess();
-		UserDomainImpl udi = new UserDomainImpl(0);
+		UserDomainImpl udi = new UserDomainImpl(0, "", "");
 		List<UserDomainImpl>user = new ArrayList<UserDomainImpl>();
 		
 	
@@ -67,12 +67,12 @@ public class SecurityImpl implements SecurityAPI {
 		
 		
 		while(rs.next()){
-			user.add(new UserDomainImpl(rs.getInt("ID")));
+			user.add(new UserDomainImpl(rs.getInt("ID"), rs.getString("Name"), rs.getString("email")));
 		}
 		
 		for (UserDomainImpl u : user){
 			
-			System.out.println(u.getId());
+			System.out.println(u.getId() + " " + u.getName() + " " + u.getEmail());
 		}
 		
 		

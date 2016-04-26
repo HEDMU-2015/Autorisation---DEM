@@ -69,8 +69,10 @@ public class UserDomainImpl {
 	}
 
 	
-	public UserDomainImpl(int id){
+	public UserDomainImpl(int id, String name, String email){
 		this.id = id;
+		this.name = name;
+		this.email = email; 
 	}
 	
 	public UserDomainImpl(int id, String email, String name, String encryptedPassword, Boolean isLogedIn) {
